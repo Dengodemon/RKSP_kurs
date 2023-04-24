@@ -1,0 +1,117 @@
+@import "variables.css";
+@import "zeroing.css";
+
+body {
+    background-color: var(--backg-color);
+}
+
+/*------------------- HEADER -------------------*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 50px;
+    background: rgba(
+            var(--ac_r),
+            var(--ac_g),
+            var(--ac_b),
+            0.05);
+    border-bottom: solid var(--main-color) 1px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav p {
+    padding: 0 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.user {
+    padding: 0 0 0 50px;
+}
+
+
+/*------------------- HEADER -------------------*/
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--backg-color);
+    border: solid var(--accent-color) 1px;
+    margin: 10px 0 30px 0;
+}
+input:focus {
+    outline: solid 1px var(--accent-color);
+}
+
+button {
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 5px;
+    border: none;
+    color: var(--backg-color);
+    background-color: var(--accent-color);
+    margin: 15px auto 0 auto;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: rgba(
+            var(--ac_r),
+            var(--ac_g),
+            var(--ac_b),
+            0.8);;
+}
+.orSign {
+    margin: 30px 0 0 0;
+    align-self: center;
+}
+
+p {
+    margin: 0;
+    font-family: Mulish, sans-serif;
+    color: var(--main-color);
+}
+
+.content-container {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh
+        - var(--header-height)
+        - var(--footer-height)
+        - 21px);
+}
+
+
+
+/*------------------- FOOTER -------------------*/
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--footer-height);
+    background: var(--accent-color);
+    color: white;
+}
+/*------------------- FOOTER -------------------*/

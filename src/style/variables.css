@@ -1,0 +1,11 @@
+:root {
+    --backg-color: #fff9f9;
+    --main-color: #002387;
+    --accent-color: #197783;
+    --ac_r: 25;
+    --ac_g: 119;
+    --ac_b: 131;
+    --danger-color: #dc3427;
+    --header-height: 50px;
+    --footer-height: 40px;
+}

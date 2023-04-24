@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--footer-height);
+    background: #063C79;
+    color: white;
+}
