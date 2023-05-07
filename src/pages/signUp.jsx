@@ -1,8 +1,6 @@
 import React from 'react'
-import TextForm from "./textForm";
-import Button from './button'
-import Header from "./header";
-import Footer from "./footer";
+import TextForm from "../components/textForm";
+import Button from '../components/button'
 
 function SignUp() {
   let login = {
@@ -36,20 +34,16 @@ function SignUp() {
     text: "Войти"
   }
   return (
-    <div>
-      <Header/>
-      <div className={"content-container"}>
-        <form className="sign">
-          <TextForm form={login}/>
-          <TextForm form={mailForm}/>
-          <TextForm form={passwordForm}/>
-          <TextForm form={passwordConfirmForm}/>
-          <Button button={signIn}/>
-          <p className={"orSign"}>или</p>
-          <Button button={signUp}/>
-        </form>
-      </div>
-      <Footer/>
+    <div className={"content-container"}>
+      <form className="sign">
+        <TextForm form={login}/>
+        <TextForm form={mailForm}/>
+        <TextForm form={passwordForm}/>
+        <TextForm form={passwordConfirmForm}/>
+        <Button button={signIn}/>
+        <p className={"orSign"}>или</p>
+        <Button button={signUp}/>
+      </form>
     </div>
   )
 }
