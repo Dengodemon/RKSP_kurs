@@ -1,6 +1,7 @@
 import React from 'react'
 import TextForm from "../components/textForm";
 import Button from '../components/button'
+import AuthLink from "../components/authLink";
 
 function SignUp() {
   let login = {
@@ -31,18 +32,19 @@ function SignUp() {
     text: "Зарегистрироваться"
   }
   let signIn = {
-    text: "Войти"
+    text: "Войти",
+    link: "/signIn"
   }
   return (
     <div className={"content-container"}>
-      <form className="sign">
+      <form className="sign-container">
         <TextForm form={login}/>
         <TextForm form={mailForm}/>
         <TextForm form={passwordForm}/>
         <TextForm form={passwordConfirmForm}/>
-        <Button button={signIn}/>
-        <p className={"orSign"}>или</p>
         <Button button={signUp}/>
+        <p className={"orSign"}>или</p>
+        <AuthLink sign={signIn}/>
       </form>
     </div>
   )
