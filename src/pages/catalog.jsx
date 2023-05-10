@@ -2,7 +2,7 @@ import React from 'react'
 
 function Catalog () {
   return (
-    <p>Catalog!</p>
+    <div className="content-container">Catalog!</div>
   )
 }
 export default Catalog;

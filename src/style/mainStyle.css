@@ -48,6 +48,8 @@ nav {
 /*------------------- HEADER -------------------*/
 
 .content-container {
+    width: calc(100vw - 40px);
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     min-height: calc(100vh
@@ -109,6 +111,23 @@ button:hover {
     align-self: center;
     color: var(--accent-color);
     text-decoration-line: underline;
+}
+
+.shopItem {
+    border-bottom: solid var(--accent-color) 1px;
+    padding: 15px 0;
+}
+
+.address {
+    font-weight: bolder;
+}
+.subway {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+h1 {
+    font-size: 24px;
+
 }
 
 p {
