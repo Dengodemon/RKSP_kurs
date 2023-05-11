@@ -17,8 +17,7 @@ header {
             var(--ac_r),
             var(--ac_g),
             var(--ac_b),
-            0.05);
-    border-bottom: solid var(--main-color) 1px;
+            0.1);
     margin-bottom: 20px;
 }
 
@@ -55,7 +54,7 @@ nav {
     min-height: calc(100vh
     - var(--header-height)
     - var(--footer-height)
-    - 21px);
+    - 20px);
 }
 
 
