@@ -31,7 +31,7 @@ nav {
     padding: 0 5px;
     margin: 0 5px;
     cursor: pointer;
-    color: inherit;
+    color: var(--main-color);
     text-decoration: none;
     transition: 0.2s;
 }
@@ -120,23 +120,78 @@ button:hover {
 .address {
     font-weight: bolder;
 }
+
+.itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.itemCard {
+    min-width: 250px;
+    width: calc(100%/2 - 50px);
+    max-width: 450px;
+    border-radius: 10px;
+    padding: 15px;
+    background: rgba(
+            var(--ac_r),
+            var(--ac_g),
+            var(--ac_b),
+            0.05);
+    margin: 10px;
+}
+
+.itemName {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 .subway {
     margin-bottom: 5px;
     font-size: 14px;
 }
-h1 {
-    font-size: 24px;
 
+.brand {
+    font-weight: bolder;
+    font-size: 16px;
 }
 
-p {
-    margin: 0;
-    font-family: Mulish, sans-serif;
+.characteristic {
+    font-weight: bolder;
+    padding-right: 15px;
+}
+
+.cost {
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 20px;
     color: var(--main-color);
 }
 
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+h1 {
 
+    margin-left: 30px;
+    font-size: 24px;
+}
+table {
+    font-size: 14px;
+    padding-top: 10px;
+}
+td {
+    font-weight: lighter;
+    color: var(--text-color);
+}
+p {
+    margin: 0;
+    font-family: Mulish, sans-serif;
+    color: var(--text-color);
+}
 
 /*------------------- FOOTER -------------------*/
 footer {
