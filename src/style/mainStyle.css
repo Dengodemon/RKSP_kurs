@@ -92,11 +92,7 @@ button {
     transition: 0.5s;
 }
 button:hover {
-    background-color: rgba(
-            var(--ac_r),
-            var(--ac_g),
-            var(--ac_b),
-            0.8);;
+    background-color: var(--main-color);
 }
 
 .orSign {

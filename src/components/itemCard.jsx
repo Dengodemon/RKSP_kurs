@@ -1,12 +1,15 @@
 import React from 'react'
 import Button from "./button";
+import goodyear from "../imgs/goodyear.jpg"
+import kama from "../imgs/kama.jpg"
+import pirelli from "../imgs/pirelli.jpg"
 
 function ItemCard (props) {
   let buyButton = {text: "Купить"}
   let inCartButton = {text: "Добавить в корзину"}
   return (
     <div className="itemCard">
-      <img/>
+      <img src={props.tire.img} alt=""/>
       <p className="itemName">{props.tire.name}</p>
       <p className="brand">{props.tire.brand}</p>
       <table>
