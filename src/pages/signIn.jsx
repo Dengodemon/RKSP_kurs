@@ -5,12 +5,14 @@ import AuthLink from "../components/authLink";
 
 function SignIn() {
   let mailForm = {
+    type: "text",
     label: "Адрес электронной почты",
     name: 'mail',
     placeholder: 'your_mail@email.com',
     maxLength: 70
   }
   let passwordForm = {
+    type: "password",
     label: "Пароль",
     name: 'password',
     placeholder: '••••••••',

@@ -10,7 +10,7 @@ function Header(props) {
           <Link className="navLink" to="/shops">Магазины</Link>
           <Link className="navLink" to="/cart">Корзина</Link>
       </nav>
-      <p className="user">{props.username}</p>
+      <Link className="navLink" to="/signIn">antony.z@mail.ru</Link>
     </header>
   )
 }

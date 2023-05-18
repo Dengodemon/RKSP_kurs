@@ -2,7 +2,8 @@ import React from 'react'
 
 function TextInput(props) {
   return (
-    <input name={props.form.name}
+    <input type={props.form.type}
+           name={props.form.name}
            placeholder={props.form.placeholder}
            maxLength={props.form.maxLength}
     />
