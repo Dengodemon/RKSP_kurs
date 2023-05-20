@@ -1,19 +1,19 @@
-import {Route, Routes} from "react-router-dom"
-import './style/mainStyle.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import './frontend/style/mainStyle.css';
 
-import Header from "./components/header";
-import Footer from "./components/footer";
-import NotFound from "./pages/notFound";
-import Catalog from "./pages/catalog";
-import SignUp from "./pages/signUp";
-import SignIn from "./pages/signIn";
-import Cart from "./pages/cart";
-import ShopAddresses from "./pages/shopAddresses";
-import PersonalAccount from "./pages/personalAccount";
+import Header from "./frontend/components/header";
+import Footer from "./frontend/components/footer";
+import NotFound from "./frontend/pages/notFound";
+import Catalog from "./frontend/pages/catalog";
+import SignUp from "./frontend/pages/signUp";
+import SignIn from "./frontend/pages/signIn";
+import Cart from "./frontend/pages/cart";
+import ShopAddresses from "./frontend/pages/shopAddresses";
+import PersonalAccount from "./frontend/pages/personalAccount";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header/>
       <Routes>
         <Route path="/" element={<Catalog/>} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="*" element={<NotFound/>} />
       </Routes>
       <Footer/>
-    </>
+    </BrowserRouter>
   );
 }
 
