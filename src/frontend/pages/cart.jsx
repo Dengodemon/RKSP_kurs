@@ -1,7 +1,6 @@
 import React from 'react'
 import kama from "../imgs/kama.jpg"
 import cordiant from "../imgs/cordiant.jpg";
-import Characteristics from "../components/characteristics";
 import Button from "../components/button";
 import CartedItem from "../components/cartedItem";
 

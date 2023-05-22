@@ -6,7 +6,8 @@
 import express from 'express';
 import mongoose from "mongoose";
 import * as UserController from "./controllers/UserController.js";
-import {registerValidation} from './validations/auth.js';
+import * as TyreController from "./controllers/TyreController.js";
+import * as Validation from './validations.js';
 import checkAuth from "./utils/checkAuth.js";
 
 mongoose
@@ -16,10 +17,14 @@ mongoose
 
 const app = express();
 app.use(express.json);
+TyreController.loadTyres();
 
-app.post('/auth/login', UserController.login);
-app.post('/auth/register', registerValidation, UserController.register);
+app.post('/auth/login', Validation.loginValidation, UserController.login);
+app.post('/auth/register', Validation.registerValidation, UserController.register);
 app.get('auth/me', checkAuth, UserController.getMe);
+app.post('/catalog/addToCart', TyreController.addToCart);
+app.post('/cart/addOne', TyreController.addOne());
+app.post('/cart/reduceOne', TyreController.reduceOne());
 
 app.listen(4444, (err) => {
   if (err)
