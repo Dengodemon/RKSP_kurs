@@ -1,5 +1,5 @@
 import React from 'react'
-import ShopItem from "../components/shopItem";
+import ShopItem from "../components/shopItem.jsx";
 
 function ShopAddresses () {
   let shopMskZhukov = {

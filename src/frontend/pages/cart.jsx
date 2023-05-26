@@ -1,8 +1,8 @@
 import React from 'react'
 import kama from "../imgs/kama.jpg"
 import cordiant from "../imgs/cordiant.jpg";
-import Button from "../components/button";
-import CartedItem from "../components/cartedItem";
+import Button from "../components/button.jsx";
+import CartedItem from "../components/cartedItem.jsx";
 
 function Cart () {
   let cordSum185 = {

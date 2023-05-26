@@ -1,6 +1,6 @@
 import React from 'react'
 import kama from "../imgs/kama.jpg";
-import Characteristics from "./characteristics";
+import Characteristics from "./characteristics.jsx";
 
 function CartedItem(props) {
   return (

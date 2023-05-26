@@ -1,13 +1,9 @@
 import TyreModel from "../models/Tyre.js"
-import cordiant from "../frontend/imgs/cordiant.jpg";
-import pirelli from "../frontend/imgs/pirelli.jpg";
-import kama from "../frontend/imgs/kama.jpg";
-import goodyear from "../frontend/imgs/goodyear.jpg";
 
 export const loadTyres = (req, res) => {
   try {
-    const cordSum185 = new TyreModel({
-      img: cordiant,
+    const doc = new TyreModel({
+      img: "cordiant",
       name: "Шина летняя 185/65R15 ROAD_RUNNER, PS-1 б/к",
       brand: "CORDIANT",
       width: 185,
@@ -18,9 +14,8 @@ export const loadTyres = (req, res) => {
       spikes: "Нет",
       cost: 3674,
       amount: 0,
-    });
-    const pirSum225 = new TyreModel({
-      img: pirelli,
+    }, {
+      img: "pirelli",
       name: "PIRELLI POWERGY 225/60 R18 104V XL",
       brand: "PIRELLI",
       width: 225,
@@ -31,9 +26,8 @@ export const loadTyres = (req, res) => {
       spikes: "Нет",
       cost: 12110,
       amount: 0,
-    });
-    const kamaWin175 = new TyreModel({
-      img: kama,
+    }, {
+      img: "kama",
       name: "КАМА IRBIS КАМА-505 175/70 R13 82T",
       brand: "KAMA",
       width: 175,
@@ -44,9 +38,8 @@ export const loadTyres = (req, res) => {
       spikes: "Есть",
       cost: 3120,
       amount: 0,
-    });
-    const goodWin275 = new TyreModel({
-      img: goodyear,
+    }, {
+      img: "goodyear",
       name: "GOODYEAR ULTRAGRIP ARCTIC 2 SUV 275/45 R21 110T XL",
       brand: "GOOGYEAR",
       width: 275,
@@ -57,13 +50,10 @@ export const loadTyres = (req, res) => {
       spikes: "Есть",
       cost: 24770,
       amount: 0,
-    })
-    cordSum185.save();
-    pirSum225.save();
-    kamaWin175.save();
-    goodWin275.save();
+    });
+    doc.save();
   } catch (err) {
-    console.log(err);
+    console.log(err, "Добавление шин пошло по пизде");
     res.status(501).json({
       message: "Не удалось добавить товар в корзину",
     });
@@ -71,7 +61,7 @@ export const loadTyres = (req, res) => {
 }
 export const addToCart = async (req, res) => {
   try {
-    let tyre = await TyreModel.findOne(req.name);
+    let tyre = await TyreModel.findOne({name: req.body.name});
     tyre.amount += 4;
   } catch (err) {
     console.log(err);
@@ -83,8 +73,8 @@ export const addToCart = async (req, res) => {
 
 export const addOne = async (req, res) => {
   try {
-    let tyre = await TyreModel.findOne(req.name);
-    tyre.amount += 1;
+    let tyre = await TyreModel.findOne({name: req.body.name});
+    tyre.amount = toString(parseInt(tyre.amount) + 1);
   } catch (err) {
     console.log(err);
     res.status(501).json({
@@ -95,7 +85,7 @@ export const addOne = async (req, res) => {
 
 export const reduceOne = async (req, res) => {
   try {
-    let tyre = await TyreModel.findOne(req.name);
+    let tyre = await TyreModel.findOne({name: req.body.name});
     tyre.amount -= 1;
   } catch (err) {
     console.log(err);

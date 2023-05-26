@@ -20,7 +20,6 @@ export const register = async (req, res) => {
     const doc = new UserModel({
       email: req.body.email,
       fullName: req.body.fullName,
-      avatarUrl: req.body.avatarUrl,
       passwordHash: hash,
     });
     const user = await doc.save();
@@ -54,7 +53,7 @@ export const login = async (req, res) => {
       });
     }
 
-    const isValidPass = await bcrypt.compare(req.body.password, user._doc.passwordHash);
+    const isValidPass = await bcrypt.compare(req.body.password, user.doc.passwordHash);
 
     if (!isValidPass) {
       return req.status(403).json ({

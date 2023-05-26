@@ -12,3 +12,7 @@ export const registerValidation = [
   // optional - необязательный параметр
   body('avatarUrl', 'Неверная ссылка на аватар').optional().isURL(),
 ]
+
+export const tyreCart = [
+  body('name', 'Неверное название шины').isLength({min: 5}),
+]

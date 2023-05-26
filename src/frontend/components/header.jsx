@@ -1,16 +1,22 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import SignIn from "../pages/signIn";
 
 function Header(props) {
+  const isAuth = false;
+
+
   return (
     <header>
       <nav>
-          <Link className="navLink" to="/">Главная</Link>
-          <Link className="navLink" to="/shops">Магазины</Link>
-          <Link className="navLink" to="/cart">Корзина</Link>
+        <Link className="navLink" to="/">Каталог</Link>
+        <Link className="navLink" to="/shops">Магазины</Link>
+        <Link className="navLink" to="/cart">Корзина</Link>
       </nav>
-      <Link className="navLink" to="/signIn">antony.z@mail.ru</Link>
+      {isAuth ? (
+          <Link className="navLink" to="/account">{props.user.login}</Link>
+      ) : (
+        <Link className="navLink" to="/signUp">Зарегистрироваться</Link>
+        )}
     </header>
   )
 }

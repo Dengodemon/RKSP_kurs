@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {Int32} from "mongodb";
+// import {Int32} from "mongodb";
 
 const TyreSchema = new mongoose.Schema({
     name: {
@@ -16,15 +16,15 @@ const TyreSchema = new mongoose.Schema({
       required: true,
     },
     width: {
-      type: Int32,
+      type: String,
       required: true,
     },
     profile: {
-      type: Int32,
+      type: String,
       required: true,
     },
     diameter: {
-      type: Int32,
+      type: String,
       required: true,
     },
     carType: {
@@ -40,9 +40,9 @@ const TyreSchema = new mongoose.Schema({
       required: true,
     },
     cost: {
-      type: Int32,
+      type: String,
       required: true,
     },
-    amount:  Int32,
+    amount: String,
   });
 export default mongoose.model('Tyre', TyreSchema);

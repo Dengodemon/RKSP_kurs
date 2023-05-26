@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemCard from "../components/itemCard"
+import ItemCard from "../components/itemCard.jsx"
 import cordiant from "../imgs/cordiant.jpg"
 import goodyear from "../imgs/goodyear.jpg"
 import kama from "../imgs/kama.jpg"

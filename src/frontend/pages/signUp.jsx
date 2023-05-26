@@ -1,7 +1,7 @@
 import React from 'react'
-import TextForm from "../components/textForm";
-import Button from '../components/button'
-import AuthLink from "../components/authLink";
+import TextForm from "../components/textForm.jsx";
+import Button from '../components/button.jsx'
+import AuthLink from "../components/authLink.jsx";
 
 function SignUp() {
   let login = {

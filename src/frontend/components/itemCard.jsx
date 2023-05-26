@@ -3,7 +3,7 @@ import Button from "./button";
 import goodyear from "../imgs/goodyear.jpg"
 import kama from "../imgs/kama.jpg"
 import pirelli from "../imgs/pirelli.jpg"
-import Characteristics from "./characteristics";
+import Characteristics from "./characteristics.jsx";
 
 function ItemCard (props) {
   let buyButton = {text: "Купить"}
