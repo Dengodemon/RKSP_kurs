@@ -196,7 +196,7 @@ button:hover {
     margin-left: 20px;
     min-width: 250px;
 }
-
+/* Блок изменения количества шин в корзине */
 .numberChanger {
     display: flex;
     flex-direction: row;
@@ -205,11 +205,19 @@ button:hover {
     background-color: var(--backg-color);
     margin-top: 5px;
 }
+
+/* Блок изменения количества шин в корзине: +- */
 .plusOrMinus {
+    display: flex;
+    justify-content: center;
+    height: 45px;
     width: 10px;
     border-radius: 5px;
     text-align: center;
-    padding: 10px 15px;
+    padding: 10px 20px;
+    margin: 0;
+    color: inherit;
+    background-color: inherit;
     cursor: pointer;
 }
 .plusOrMinus:hover {
@@ -220,7 +228,10 @@ button:hover {
             0.25);
 }
 
+/* Блок изменения количества шин в корзине: количество шин */
 .itemNumber {
+    width: 30px;
+    text-align: center;
     padding: 10px 22px;
 }
 

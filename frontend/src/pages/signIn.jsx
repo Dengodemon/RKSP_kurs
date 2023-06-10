@@ -1,79 +1,56 @@
 import React, {Component} from 'react'
 import AuthLink from "../components/authLink.jsx";
-import axios from "axios";
+import useForm from "../hooks/useForm";
+import useAuth from "../hooks/useAuth";
 
-class SignIn extends Component {
-  state = {
-    login: '',
-    email: '',
-    password: '',
-    checkPass: '',
-  };
-  log = () => {
-    const user = {action: this.state};
-    if (user.login &&
-      user.login.length > 4 &&
-      user.email.isEmail() &&
-      user.password === user.checkPass
-    ) {
-      axios
-        .post('/api/auth/login', user)
-        .then((res) => {
-          if (res.data) {
-            this.props.login();
-            this.setState({
-              login: '',
-              email: '',
-              password: '',
-              checkPass: '',
-            });
-          }
-        })
-        .catch((err) => console.log(err));
-    } else {
-      console.log('input field required');
-    }
-  };
-  handleChangeEm = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-  handleChangePass = (e) => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
+export default function SignIn() {
 
-  render() {
-    let signUp = {
-      text: "Зарегистрироваться",
-      link: "/signUp"
+  const { values, handleChange } = useForm({
+    initialValues: {
+      username: '',
+      password: ''
     }
-    let params = this.state;
-    return (
-      <div className={"content-container"}>
-        <form className="sign-container">
-          <p>Адрес электронной почты</p>
+  });
+
+  const { loginUser, error } = useAuth();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    await loginUser(values);
+  }
+  let signUp = {
+    text: "Зарегистрироваться",
+    link: "/signUp"
+  }
+
+  return(
+    <div className='content-container'>
+      <div className="sign-container">
+        {/*<div className="">*/}
+        {/*  {error && <Error error={error.messages}/>}*/}
+        {/*</div>*/}
+        <form className={"sign-container"} onSubmit={handleLogin}>
+          <p>Логин</p>
           <input type="text"
                  placeholder='your_mail@email.com'
                  maxLength={70}
-                 onChange={this.handleChangeEm}
-                 value={params.email}
+                 name={'username'}
+                 onChange={handleChange}
+                 value={values.username}
           />
           <p>Пароль</p>
           <input type="password"
                  placeholder='••••••••'
                  maxLength={24}
-                 onChange={this.handleChangePass}
-                 value={params.password}
+                 name={'password'}
+                 onChange={handleChange}
+                 value={values.password}
           />
-          <button onClick={this.log}>Войти</button>
-          <p className={"orSign"}>или</p>
-          <AuthLink sign={signUp}/>
+            <button onClick={handleLogin}>Войти</button>
+            <p className={"orSign"}>или</p>
+            <AuthLink sign={signUp}/>
         </form>
       </div>
-    )
-  }
+    </div>
+  )
 }
-export default SignIn;

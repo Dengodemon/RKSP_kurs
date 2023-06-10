@@ -1,103 +1,74 @@
-import React, {Component} from 'react'
+import React, {Component, useState} from 'react'
 import AuthLink from "../components/authLink.jsx";
-import axios from "axios";
+import useForm from './../hooks/useForm';
+import useAuth from './../hooks/useAuth';
 
-class SignUp extends Component {
-  state = {
-    login: '',
-    email: '',
-    password: '',
-    checkPass: '',
-  };
-  reg = () => {
-    const user = {action: this.state};
-    if (user.login &&
-      user.login.length > 4 &&
-      user.email.isEmail() &&
-      user.password === user.checkPass
-    ) {
-      axios
-        .post('/api/auth/register', user)
-        .then((res) => {
-          if (res.data) {
-            this.props.register();
-            this.setState({
-              login: '',
-              email: '',
-              password: '',
-              checkPass: '',
-            });
-          }
-        })
-        .catch((err) => console.log(err));
-    } else {
-      console.log('input field required');
-    }
-  };
-  handleChangeLog = (e) => {
-    this.setState({
-      login: e.target.value,
-    });
-  };
-  handleChangeEm = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  };
-  handleChangePass = (e) => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
-  handleChangeCP = (e) => {
-    this.setState({
-      checkPass: e.target.value,
-    });
-  };
+export default function SignUp() {
 
-  render() {
-    let signIn = {
-      text: "Войти",
-      link: "/signIn"
+  const {values, handleChange} = useForm({
+    initialValues: {
+      email: '',
+      username: '',
+      password: '',
+      passwordConfirm: ''
     }
-    let params = this.state;
-    return (
-      <div className={"content-container"}>
-        <form className="sign-container">
+  });
+
+  const {registerUser, error} = useAuth();
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    await registerUser(values);
+  }
+
+  let signInLink = {
+    link: '/signIn',
+    text: 'Войти'
+  }
+
+  return (
+    <div className="content-container">
+      {/*<div className="sign-container">*/}
+        {/*<div className="">*/}
+        {/*  {error && <Error error={error.messages}/>}*/}
+        {/*</div>*/}
+        <form className="sign-container" onSubmit={handleRegister}>
           <p>Логин на сайте</p>
           <input type="text"
                  placeholder="Login"
                  maxLength={20}
-                 onChange={this.handleChangeLog}
-                 value={params.login}
+                 name={'username'}
+                 onChange={handleChange}
+                 value={values.username}
           />
           <p>Адрес электронной почты</p>
           <input type="text"
                  placeholder='your_mail@email.com'
                  maxLength={70}
-                 onChange={this.handleChangeEm}
-                 value={params.email}
-          />
-          <p>Пароль</p>
+                 name={'email'}
+                 onChange={handleChange}
+                 value={values.email}
+          /><p>Пароль</p>
           <input type="password"
                  placeholder='••••••••'
                  maxLength={24}
-                 onChange={this.handleChangePass}
-                 value={params.password}
+                 name={'password'}
+                 onChange={handleChange}
+                 value={values.password}
           />
           <p>Подтверждение пароля</p>
           <input type="password"
                  placeholder='••••••••'
                  maxLength={24}
-                 onChange={this.handleChangeCP}
-                 value={params.checkPass}
+                 name={'passwordConfirm'}
+                 onChange={handleChange}
+                 value={values.passwordConfirm}
           />
-          <button onClick={this.reg}>Зарегистрироваться</button>
-          <p className={"orSign"}>или</p>
-          <AuthLink sign={signIn}/>
+            <button onClick={handleRegister}>Зарегистрироваться</button>
+            <p className={"orSign"}>или</p>
+            <AuthLink sign={signInLink}/>
         </form>
-      </div>
-    )
-  }
+      {/*</div>*/}
+    </div>
+  )
 }
-export default SignUp;

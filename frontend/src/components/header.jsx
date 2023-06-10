@@ -1,10 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from "react-router-dom"
+import {UserContext} from "../hooks/UserContext";
 
-function Header(props) {
-  const isAuth = false;
-
-
+function Header(props) {;
+  const { user, isLoading } = useContext(UserContext);
   return (
     <header>
       <nav>
@@ -12,10 +11,10 @@ function Header(props) {
         <Link className="navLink" to="/shops">Магазины</Link>
         <Link className="navLink" to="/cart">Корзина</Link>
       </nav>
-      {isAuth ? (
-          <Link className="navLink" to="/account">{props.user.login}</Link>
+      {user ? (
+          <Link className="navLink" to="/account">{user.username}</Link>
       ) : (
-        <Link className="navLink" to="/signUp">Зарегистрироваться</Link>
+        <Link className="navLink" to="/signIn">Войти</Link>
         )}
     </header>
   )
