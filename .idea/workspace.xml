@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ef282c6-622f-451a-af22-9016011b38ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/AuthController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/UserContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useAuth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useFindUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useLogout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useToggle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/authRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/tyreRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/viewRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/AppError.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/catchAsync.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/TyreController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/TyreController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/personalAccount.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/personalAccount.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/signIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/signIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/signUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/signUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/style/mainStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/style/mainStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/checkAuth.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +96,7 @@
       <workItem from="1685878513797" duration="13502000" />
       <workItem from="1685963381817" duration="5516000" />
       <workItem from="1686000569010" duration="2541000" />
-      <workItem from="1686408477769" duration="7171000" />
+      <workItem from="1686408477769" duration="9209000" />
     </task>
     <servers />
   </component>
