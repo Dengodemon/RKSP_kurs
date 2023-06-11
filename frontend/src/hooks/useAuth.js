@@ -14,7 +14,9 @@ export default function useAuth() {
     console.log('setUserContext (useAuth (hooks))');
     return await axios.get(BASE_URL + '/view/user',{
       withCredentials: true,
-      headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
+      headers: {
+        'Access-Control-Allow-Origin': 'tyre-shop-back.onrender.com',
+        'Content-Type': 'application/json'
       }}).then(res => {
       setUser(res.data.user);
       console.log('axios.get(view/user): ', res.data.user);
@@ -36,7 +38,9 @@ export default function useAuth() {
       passwordConfirm
     }, {
       withCredentials: true,
-      headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
+      headers: {
+        'Access-Control-Allow-Origin': 'tyre-shop-back.onrender.com',
+        'Content-Type': 'application/json'
       }}).then(async () => {
       await setUserContext();
     })
@@ -54,7 +58,9 @@ export default function useAuth() {
       password,
     }, {
       withCredentials: true,
-      headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
+      headers: {
+        'Access-Control-Allow-Origin': 'tyre-shop-back.onrender.com',
+        'Content-Type': 'application/json'
       }}).then(async () => {
       await setUserContext();
     }).catch((err) => {

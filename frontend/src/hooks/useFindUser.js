@@ -12,7 +12,7 @@ export default function useFindUser() {
       await axios.get(BASE_URL + '/view/user', {
         withCredentials: true,
         headers: {
-          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Origin': 'tyre-shop-back.onrender.com',
           'Content-Type': 'application/json'
         }
       })
