@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function useFindUser() {
   const [user, setUser] = useState(null);
@@ -8,7 +9,7 @@ export default function useFindUser() {
   useEffect(() =>{
     async function findUser() {
       console.log('findUser (useFindUser)');
-      await axios.get('view/user', {
+      await axios.get(BASE_URL + 'view/user', {
         withCredentials: true,
         headers: {
           'Access-Control-Allow-Origin': '*',

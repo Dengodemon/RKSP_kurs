@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 import { UserContext } from './UserContext';
 
 export default function useAuth() {
@@ -11,7 +12,7 @@ export default function useAuth() {
   //set user
   const setUserContext = async () => {
     console.log('setUserContext (useAuth (hooks))');
-    return await axios.get('view/user',{
+    return await axios.get(BASE_URL + 'view/user',{
       withCredentials: true,
       headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
       }}).then(res => {
@@ -28,7 +29,7 @@ export default function useAuth() {
   const registerUser = async (data) => {
     console.log('registerUser (UseAuth (hooks))');
     const { username, email, password, passwordConfirm } = data;
-    return axios.post(`auth/register`, {
+    return axios.post(BASE_URL + `auth/register`, {
       username,
       email,
       password,
@@ -48,7 +49,7 @@ export default function useAuth() {
   const loginUser = async (data) => {
     console.log('loginUser data: ', data);
     const { username, password } = data;
-    return axios.post('/auth/login', {
+    return axios.post(BASE_URL + '/auth/login', {
       username,
       password,
     }, {

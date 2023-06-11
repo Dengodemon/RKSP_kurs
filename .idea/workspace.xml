@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3ef282c6-622f-451a-af22-9016011b38ed" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/authRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/authRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/viewRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/viewRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useFindUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useFindUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useLogout.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useLogout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +50,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\darua\studying\CSSD\shop\frontend\public" />
       <recent name="C:\Users\darua\studying\CSSD\shop\frontend\src" />
       <recent name="C:\Users\darua\studying\CSSD\shop\frontend" />
       <recent name="C:\Users\darua\studying\CSSD\tyre_shop" />
       <recent name="C:\Users\darua\studying\CSSD\tyre_shop\frontend\src" />
-      <recent name="C:\Users\darua\studying\CSSD\tyre_shop\frontend" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -97,7 +101,8 @@
       <workItem from="1685878513797" duration="13502000" />
       <workItem from="1685963381817" duration="5516000" />
       <workItem from="1686000569010" duration="2541000" />
-      <workItem from="1686408477769" duration="11375000" />
+      <workItem from="1686408477769" duration="13601000" />
+      <workItem from="1686496761664" duration="5412000" />
     </task>
     <servers />
   </component>

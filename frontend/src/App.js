@@ -5,8 +5,8 @@ import { UserContext } from './hooks/UserContext';
 import useFindUser from "./hooks/useFindUser";
 
 import Header from "./components/header.jsx";
-import Footer from "./components/footer.jsx"
-  ;
+import Footer from "./components/footer.jsx";
+
 import NotFound from "./pages/notFound.jsx";
 import Catalog from "./pages/catalog.jsx";
 import SignUp from "./pages/signUp.jsx";
@@ -16,7 +16,7 @@ import ShopAddresses from "./pages/shopAddresses.jsx";
 import PersonalAccount from "./pages/PrivateRoute.js";
 import PrivateRoute from "./pages/PrivateRoute.js";
 
-function App() {
+function App () {
   const {user, setUser, isLoading} = useFindUser();
 
   return (
