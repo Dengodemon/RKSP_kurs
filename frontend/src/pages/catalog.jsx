@@ -13,8 +13,9 @@ class Catalog extends Component {
   }
 
   getTyres = () => {
+    const BASE_URL = process.env.REACT_APP_BASE_URL;
     axios
-      .get('/api/tyres')
+      .get(BASE_URL + '/api/tyres')
       .then((res) => {
         console.log('getTyres() returned', res.data);
         if (res.data) {

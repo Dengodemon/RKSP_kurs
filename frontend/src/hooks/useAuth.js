@@ -12,7 +12,7 @@ export default function useAuth() {
   //set user
   const setUserContext = async () => {
     console.log('setUserContext (useAuth (hooks))');
-    return await axios.get(BASE_URL + 'view/user',{
+    return await axios.get(BASE_URL + '/view/user',{
       withCredentials: true,
       headers: {'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json'
       }}).then(res => {
@@ -29,7 +29,7 @@ export default function useAuth() {
   const registerUser = async (data) => {
     console.log('registerUser (UseAuth (hooks))');
     const { username, email, password, passwordConfirm } = data;
-    return axios.post(BASE_URL + `auth/register`, {
+    return axios.post(BASE_URL + `/auth/register`, {
       username,
       email,
       password,

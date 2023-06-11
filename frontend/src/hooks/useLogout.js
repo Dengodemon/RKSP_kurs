@@ -8,7 +8,7 @@ export default function useLogout() {
   const logoutUser = async () => {
     try {
       await axios
-        .get(BASE_URL + `auth/logout`)
+        .get(BASE_URL + `/auth/logout`)
         .then(res => {
           console.log(res);
           history.push('/');
