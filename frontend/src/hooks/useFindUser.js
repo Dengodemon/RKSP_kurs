@@ -9,7 +9,7 @@ export default function useFindUser() {
   useEffect(() =>{
     async function findUser() {
       console.log('findUser (useFindUser)');
-      await axios.get(BASE_URL + 'view/user', {
+      await axios.get(BASE_URL + '/view/user', {
         withCredentials: true,
         headers: {
           'Access-Control-Allow-Origin': '*',
