@@ -1,8 +1,8 @@
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
-const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function useLogout() {
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
   let history = useHistory();
 
   const logoutUser = async () => {

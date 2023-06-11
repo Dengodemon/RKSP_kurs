@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function useFindUser() {
   const [user, setUser] = useState(null);
   const [isLoading, setLoading] = useState(true);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   useEffect(() =>{
     async function findUser() {

@@ -1,13 +1,13 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-const BASE_URL = process.env.REACT_APP_BASE_URL;
 import { UserContext } from './UserContext';
 
 export default function useAuth() {
   let navigate = useNavigate();
   const { setUser } = useContext(UserContext);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_BASE_URL;
 
   //set user
   const setUserContext = async () => {
